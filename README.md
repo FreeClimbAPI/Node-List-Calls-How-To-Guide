@@ -2,7 +2,7 @@
 
 This project serves as a guide to help you build an application with Persephony. Specifically, the project will:
 
-- Get call logs  
+- Get call logs associated with your account
 
 ## Setting up your new app within your Persephony account
 
