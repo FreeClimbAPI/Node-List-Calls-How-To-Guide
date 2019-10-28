@@ -1,9 +1,9 @@
 require('dotenv').config()
-const persephonySDK = require('@persephony/sdk')
-// your Persephony API key (available in the Dashboard) - be sure to set up environment variables to store these values
+const freeclimbSDK = require('@freeclimb/sdk')
+// your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
 const authToken = process.env.AUTH_TOKEN
-const persephony = persephonySDK(accountId, authToken)
+const freeclimb = freeclimbSDK(accountId, authToken)
 
 getCallsList().then(calls => {
   // Use the calls
@@ -15,13 +15,13 @@ async function getCallsList() {
   // Create array to store all calls
   const calls = []
   // Invoke GET method to retrieve initial list of call information
-  const first = await persephony.api.calls.getList()
+  const first = await freeclimb.api.calls.getList()
   calls.push(...first.calls)
   // Get Uri for next page
   let nextPageUri = first.nextPageUri
   // Retrieve entire call list 
   while (nextPageUri) {
-    const nextPage = await persephony.api.calls.getNextPage(nextPageUri)
+    const nextPage = await freeclimb.api.calls.getNextPage(nextPageUri)
     calls.push(...nextPage.calls)
     nextPageUri = nextPage.nextPageUri
   }
