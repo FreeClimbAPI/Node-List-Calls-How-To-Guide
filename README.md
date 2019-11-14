@@ -1,6 +1,6 @@
 # Node - List Calls Tutorial
 
-This project serves as a guide to help you build an application with FreeClimb. Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. View this tutorial on [FreeClimb.com](https://docs.freeclimb.com/docs/how-to-list-calls#section-javascript). Specifically, the project will:
 
 - Get call logs associated with your account
 
