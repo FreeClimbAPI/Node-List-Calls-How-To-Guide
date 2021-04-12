@@ -2,8 +2,8 @@ require('dotenv').config()
 const freeclimbSDK = require('@freeclimb/sdk')
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
-const authToken = process.env.AUTH_TOKEN
-const freeclimb = freeclimbSDK(accountId, authToken)
+const apiKey = process.env.API_KEY
+const freeclimb = freeclimbSDK(accountId, apiKey)
 
 getCallsList().then(calls => {
   // Use the calls
