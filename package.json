@@ -2,7 +2,7 @@
   "name": "node-list-calls-tutorial",
   "version": "1.0.0",
   "dependencies": {
-    "@freeclimb/sdk": "^1.0.0",
+    "@freeclimb/sdk": "^3.0.1",
     "dotenv": "^8.1.0"
   }
 }
