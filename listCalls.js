@@ -1,9 +1,14 @@
 require('dotenv').config()
-const freeclimbSDK = require('@freeclimb/sdk')
+const fs = require('fs')
+const { createConfiguration, DefaultApi } = require('@freeclimb/sdk')
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
 const apiKey = process.env.API_KEY
-const freeclimb = freeclimbSDK(accountId, apiKey)
+
+const freeclimb = new DefaultApi(createConfiguration({
+  accountId: accountId,
+  apiKey: apiKey,
+}))
 
 getCallsList().then(calls => {
   // Use the calls
@@ -12,18 +17,9 @@ getCallsList().then(calls => {
 })
 
 async function getCallsList() {
-  // Create array to store all calls
-  const calls = []
-  // Invoke GET method to retrieve initial list of call information
-  const first = await freeclimb.api.calls.getList()
-  calls.push(...first.calls)
-  // Get Uri for next page
-  let nextPageUri = first.nextPageUri
-  // Retrieve entire call list 
-  while (nextPageUri) {
-    const nextPage = await freeclimb.api.calls.getNextPage(nextPageUri)
-    calls.push(...nextPage.calls)
-    nextPageUri = nextPage.nextPageUri
-  }
+  const calls = await freeclimb.listCalls()
+  /**
+   * At the time of this writing - pagination has not been implemented. A future update will make this more clear
+   */
   return calls
 }
