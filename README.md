@@ -1,6 +1,6 @@
-# Node - List Calls Tutorial
+# Node - List Calls How-To Guide
 
-This project serves as a guide to help you build an application with FreeClimb. View this tutorial on [FreeClimb.com](https://docs.freeclimb.com/docs/how-to-list-calls#section-nodejs). Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. View this how-to guide on [FreeClimb.com](https://docs.freeclimb.com/docs/how-to-list-calls#section-nodejs). Specifically, the project will:
 
 - Get call logs associated with your account
 
@@ -8,7 +8,7 @@ This project serves as a guide to help you build an application with FreeClimb. 
 
 To get started using a FreeClimb account, follow the instructions [here](https://docs.freeclimb.com/docs/getting-started-with-freeclimb).
 
-## Setting up Tutorial
+## Setting up how-to guide
 
 1. Install the node packages necessary using command:
 
@@ -24,7 +24,7 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
    | API_KEY              | API key which can be found under [API credentials](https://www.freeclimb.com/dashboard/portal/account/authentication) in Dashboard                                               |
 
 
-## Runnning the Tutorial
+## Runnning the how-to guide
 
 1. Run the application using command:
 
